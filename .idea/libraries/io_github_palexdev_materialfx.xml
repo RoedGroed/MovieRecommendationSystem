@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="io.github.palexdev.materialfx" type="repository">
+    <properties maven-id="io.github.palexdev:materialfx:11.13.5">
+      <exclude>
+        <dependency maven-id="io.github.palexdev:virtualizedfx" />
+      </exclude>
+    </properties>
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/github/palexdev/materialfx/11.13.5/materialfx-11.13.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

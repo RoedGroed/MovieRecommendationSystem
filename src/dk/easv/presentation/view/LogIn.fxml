@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.LogInController">
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="908.0">
+         <children>
+            <ImageView fx:id="imgViewLogin" fitHeight="512.0" fitWidth="914.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true" />
+            <GridPane layoutX="160.0" layoutY="159.0" prefHeight="30.0" prefWidth="133.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <PasswordField fx:id="passwordField" disable="true" layoutX="350.0" layoutY="283.0" prefHeight="25.0" prefWidth="185.0" />
+            <MFXButton layoutX="350.0" layoutY="342.0" onAction="#logIn" text="Login" />
+            <MFXButton layoutX="476.0" layoutY="342.0" onAction="#signUp" text="Sign up" />
+            <Label fx:id="lblTitle" layoutX="310.0" layoutY="37.0" prefHeight="100.0" prefWidth="252.0" text="Label" />
+            <TextField fx:id="userId" layoutX="351.0" layoutY="197.0" prefHeight="25.0" prefWidth="184.0" text="Georgi Facello" />
+            <Label fx:id="lblLogin" layoutX="350.0" layoutY="166.0" text="Label" />
+            <Label fx:id="lblPassword" layoutX="350.0" layoutY="248.0" text="Label" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
