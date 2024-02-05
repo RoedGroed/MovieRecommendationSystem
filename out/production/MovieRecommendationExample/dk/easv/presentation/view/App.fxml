@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="dk.easv.presentation.controller.AppController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="lblTitle" layoutX="743.0" layoutY="71.0" prefHeight="129.0" prefWidth="435.0" text="Flixhub" />
+      <Label fx:id="lblRecommended" layoutX="380.0" layoutY="300.0" prefHeight="43.0" prefWidth="263.0" text="Recommended" />
+      <Label fx:id="lblRecommended1" layoutX="380.0" layoutY="500.0" prefHeight="43.0" prefWidth="263.0" text="Top 10" />
+      <Label fx:id="lblRecommended2" layoutX="380.0" layoutY="700.0" prefHeight="43.0" prefWidth="263.0" text="Favourites" />
+      <HBox layoutX="370.0" layoutY="343.0" prefHeight="150.0" prefWidth="1180.0" spacing="40.0">
+         <children>
+            <ImageView fx:id="imgRec1" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgRec2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgRec3" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgRec4" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgRec5" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+      <HBox layoutX="371.0" layoutY="540.0" prefHeight="150.0" prefWidth="1180.0" spacing="40.0">
+         <children>
+            <ImageView fx:id="imgTop1" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgTop2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgTop3" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgTop4" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgTop5" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+      <HBox layoutX="371.0" layoutY="743.0" prefHeight="150.0" prefWidth="1180.0" spacing="40.0">
+         <children>
+            <ImageView fx:id="imgFav1" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgFav2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgFav3" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgFav4" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgFav5" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+      <MFXButton layoutX="279.0" layoutY="393.0" onAction="#onPrevRec" text="&lt;" />
+      <MFXButton layoutX="279.0" layoutY="590.0" onAction="#onPrevTop" text="&lt;" />
+      <MFXButton layoutX="279.0" layoutY="793.0" onAction="#onPrevFav" text="&lt;" />
+      <MFXButton layoutX="1604.0" layoutY="403.0" onAction="#onNextRec" text="&gt;" />
+      <MFXButton layoutX="1604.0" layoutY="600.0" onAction="#onNextTop" text="&gt;" />
+      <MFXButton layoutX="1604.0" layoutY="803.0" onAction="#onNextFav" text="&gt;" />
+   </children>
 </AnchorPane>
