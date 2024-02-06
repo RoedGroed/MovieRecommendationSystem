@@ -1,0 +1,50 @@
+
+/* Adds the same settings to all text elements, unless specified otherwise */
+* {
+    -fx-text-fill: rgba(231, 53, 53, 0.81);
+    -fx-font-family: 'Inter';
+}
+
+#borderBG{
+    -fx-background-image:url(images/LoginBg.jpg);
+    -fx-background-size: stretch;
+    -fx-background-position: center;
+}
+
+Label{
+    -fx-font-size: 25;
+    -fx-font-weight: 900;
+    -fx-font-style: Italic;
+
+}
+.mfx-button{
+    -fx-font-size: 15;
+    -fx-font-weight: 900;
+    -fx-text-fill: rgba(231, 53, 53, 0.81);
+    -fx-background-radius: 8;
+    -fx-background-color: rgb(27, 77, 159);
+    -fx-font-style: Italic;
+
+}
+
+.loginTextFields{
+     /* Username Field */
+    -fx-background-color: rgb(9, 45, 99);
+    -fx-min-height: 40;
+    -fx-min-width: 300;
+    -fx-text-fill: white;
+    -fx-font-style: Italic;
+    -fx-background-radius: 10;
+
+}
+
+/* Flixhub */
+#titleLabel{
+    -fx-text-fill: rgba(231, 53, 53, 0.81);
+    -fx-font-weight: 900;
+    -fx-font-size: 90px;
+    -fx-alignment: center;
+    -fx-opacity: 81;
+    -fx-font-style: normal;
+
+}
