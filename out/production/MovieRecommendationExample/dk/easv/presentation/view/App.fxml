@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
    <children>
-      <ImageView fitHeight="1080.0" fitWidth="1920.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="Appbg" fitHeight="1080.0" fitWidth="1920.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" />
       <Label fx:id="lblTitle" layoutX="743.0" layoutY="71.0" prefHeight="129.0" prefWidth="435.0" text="Flixhub" />
       <Label fx:id="lblRecommended" layoutX="380.0" layoutY="300.0" prefHeight="43.0" prefWidth="263.0" text="Recommended" />
       <Label fx:id="lblRecommended1" layoutX="380.0" layoutY="500.0" prefHeight="43.0" prefWidth="263.0" text="Top 10" />
