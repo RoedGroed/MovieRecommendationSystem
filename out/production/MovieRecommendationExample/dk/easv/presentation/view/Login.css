@@ -18,9 +18,9 @@ Label{
 
 }
 .mfx-button{
-    -fx-font-size: 15;
+    -fx-font-size: 18;
     -fx-font-weight: 900;
-    -fx-text-fill: rgba(231, 53, 53, 0.81);
+    -fx-text-fill: rgba(231, 53, 53);
     -fx-background-radius: 8;
     -fx-background-color: rgb(27, 77, 159);
     -fx-font-style: Italic;

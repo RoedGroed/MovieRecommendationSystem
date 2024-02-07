@@ -16,7 +16,7 @@
             <BorderPane layoutX="325.0" layoutY="167.0" />
             <Label id="titleLabel" fx:id="lblTitle" layoutX="276.0" layoutY="10.0" prefHeight="100.0" prefWidth="357.0" text="Flixhub" />
             <MFXButton layoutX="306.0" layoutY="393.0" onAction="#logIn" styleClass="mfx-button" text="Login" />
-            <MFXButton layoutX="532.0" layoutY="393.0" onAction="#signUp" styleClass="mfx-button" text="Sign up" />
+            <MFXButton layoutX="516.0" layoutY="393.0" onAction="#signUp" styleClass="mfx-button" text="Sign up" />
             <PasswordField fx:id="passwordField" disable="true" layoutX="304.0" layoutY="313.0" prefHeight="40.0" prefWidth="180.0" styleClass="loginTextFields" />
             <Label fx:id="lblPassword" layoutX="304.0" layoutY="278.0" text="Password" />
             <TextField fx:id="userId" layoutX="304.0" layoutY="222.0" prefHeight="40.0" prefWidth="180.0" styleClass="loginTextFields" text="Georgi Facello" />
