@@ -1,3 +1,43 @@
+#ApBg{
+    -fx-background-image:url(images/AppBg2.jpg);
+    -fx-background-size: stretch;
+    -fx-background-position: center;
+}
+
+#aBox{
+    -fx-background-color: #363636;
+    -fx-opacity: 91;
+}
+
+#title{
+    -fx-font-size: 150;
+    -fx-font-weight: 900;
+    -fx-alignment: CENTER;
+    -fx-text-fill: E73535;
+    -fx-opacity: 91;
+    -fx-font-style: normal;
+    -fx-effect: dropshadow(one-pass-box, rgba(0, 51, 51, 0.91), 10, 10, 4, 4);
+}
+
+#Userlbl{
+    -fx-font-size: 24;
+    -fx-font-weight: 900;
+    -fx-text-fill: E73535;
+    -fx-font-style: normal;
+}
+
+.mfx-button{
+    -fx-background-color: transparent;
+    -fx-font-size: 24;
+    -fx-font-weight: 900;
+    -fx-text-fill: E73535;
+    -fx-font-style: normal;
+}
+
+.scroll-pane{
+    -fx-background-color: transparent;
+}
+
 .movie-title{
     -fx-text-fill: white;
     -fx-font-weight: bold;

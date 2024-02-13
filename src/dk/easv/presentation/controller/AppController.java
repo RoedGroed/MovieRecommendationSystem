@@ -27,6 +27,8 @@ import java.util.*;
 
 public class AppController implements Initializable {
     @FXML
+    private Label lblUser;
+    @FXML
     private HBox favHbox;
     @FXML
     private MFXScrollPane spFav;
@@ -71,6 +73,7 @@ public class AppController implements Initializable {
 
     public void initializeWithUser(User currentUser) {
         if (currentUser != null) {
+            lblUser.setText("Signed in as: " + currentUser.getName());
             updateMovieLists(currentUser);
         }
     }

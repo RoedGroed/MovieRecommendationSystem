@@ -27,20 +27,6 @@ public class AppModel {
         obsUsers.addAll(logic.getAllUsers());
     }
 
-    public void loadData(User user) {
-        obsTopMovieSeen.clear();
-        obsTopMovieSeen.addAll(logic.getTopAverageRatedMovies(user));
-
-        obsTopMovieNotSeen.clear();
-        obsTopMovieNotSeen.addAll(logic.getTopAverageRatedMoviesUserDidNotSee(user));
-
-        obsSimilarUsers.clear();
-        obsSimilarUsers.addAll(logic.getTopSimilarUsers(user));
-
-        obsTopMoviesSimilarUsers.clear();
-        obsTopMoviesSimilarUsers.addAll(logic.getTopMoviesFromSimilarPeople(user));
-    }
-
     public ObservableList<User> getObsUsers() {
         return obsUsers;
     }
