@@ -5,9 +5,12 @@ import dk.easv.presentation.model.AppModel;
 import io.github.palexdev.materialfx.controls.MFXScrollPane;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Control;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -15,8 +18,10 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
@@ -156,4 +161,20 @@ public class AppController implements Initializable {
         double hValue = spFav.getHvalue() + SCROLL_AMOUNT / spFav.getContent().getBoundsInLocal().getWidth();
         spFav.setHvalue(Math.min(hValue, 1)); // Ensure we don't scroll past the end
     }
+
+    @FXML
+    private void onLogout() throws IOException {
+        // Close the current window
+        Stage stage = (Stage) favHbox.getScene().getWindow();
+        stage.close();
+
+        // Load the login screen
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/Login.fxml"));
+        Parent root = loader.load();
+        Stage loginStage = new Stage();
+        loginStage.setScene(new Scene(root));
+        loginStage.setTitle("Login");
+        loginStage.show();
+    }
+
 }

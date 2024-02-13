@@ -21,6 +21,7 @@
       <Label layoutX="285.0" layoutY="291.0" prefHeight="37.0" prefWidth="218.0" text="Recommended for you" />
       <MFXButton fx:id="btnLeftRec" layoutX="262.0" layoutY="390.0" onAction="#scrollLeftRec" text="&lt;" />
       <MFXButton fx:id="btnRightRec" layoutX="1636.0" layoutY="390.0" onAction="#scrollRightRec" text="&gt;" />
+      <MFXButton fx:id="btnLogout" layoutX="120.0" layoutY="205.0" mnemonicParsing="false" onAction="#onLogout" text="Logout" />
       <HBox layoutX="285.0" layoutY="559.0" prefHeight="150.0" prefWidth="1350.0">
          <children>
             <MFXScrollPane fx:id="spTop" hbarPolicy="NEVER" vbarPolicy="NEVER">

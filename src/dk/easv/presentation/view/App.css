@@ -1,8 +1,0 @@
-.movie-title{
-    -fx-text-fill: white;
-    -fx-font-weight: bold;
-    -fx-effect: dropshadow(one-pass-box, black, 5, 0, 2, 2);
-    -fx-background-color: transparent;
-    -fx-font-size: 18px;
-}
-

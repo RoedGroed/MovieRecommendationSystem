@@ -34,6 +34,10 @@ public class LogInController implements Initializable {
         if(loginSuccessful){
             User currentUser = model.getObsLoggedInUser();
             openAppWindow(currentUser);
+
+            Stage closingStage = (Stage) userId.getScene().getWindow();
+            closingStage.close();
+
         } else{
             Alert alert = new Alert(Alert.AlertType.ERROR, "Wrong username or password");
             alert.showAndWait();
@@ -65,7 +69,9 @@ public class LogInController implements Initializable {
     }
 
     public void signUp(ActionEvent actionEvent) {
-        System.out.println("Sign-Up");
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, "Sign-up closed, We're currently at user capacity. " +
+                "\rPremium users get access instantly.");
+        alert.showAndWait();
     }
 
 }
