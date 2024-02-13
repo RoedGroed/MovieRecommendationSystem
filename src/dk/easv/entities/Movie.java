@@ -8,6 +8,7 @@ public class Movie {
     private String title;
     private int year;
     private List<Rating> ratings;
+    private String imagePath;
 
     public Movie(int id, String title, int year) {
         this.id = id;
@@ -52,6 +53,14 @@ public class Movie {
 
     public int getRatingsSize(){
         return ratings.size();
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 
     @Override

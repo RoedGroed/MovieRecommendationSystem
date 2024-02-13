@@ -1,5 +1,6 @@
 package dk.easv.presentation.controller;
 
+import dk.easv.entities.User;
 import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -28,29 +29,37 @@ public class LogInController implements Initializable {
 
     public void logIn(ActionEvent actionEvent) {
         model.loadUsers();
-        model.loginUserFromUsername(userId.getText());
-        if(model.getObsLoggedInUser()!=null){
+        boolean loginSuccessful = model.loginUserFromUsername(userId.getText());
+
+        if(loginSuccessful){
+            User currentUser = model.getObsLoggedInUser();
+            openAppWindow(currentUser);
+        } else{
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Wrong username or password");
+            alert.showAndWait();
+        }
+    }
+
+    private void openAppWindow(User currentUser) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/AppDev.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/App.fxml"));
             Parent root = loader.load();
+
+            AppController appController = loader.getController();
+            appController.setModel(model); // Pass the model to the app controller
+            appController.initializeWithUser(currentUser); // Initialize with the current user
+
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.setTitle("Movie Recommendation System 0.01 Beta");
             stage.show();
-            AppDevController controller = loader.getController();
 
-            controller.setModel(model);
-
+            // Close the login window (if open)
+            // ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
 
         } catch (IOException e) {
             e.printStackTrace();
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load AppDev.fxml");
-            alert.showAndWait();
-        }
-
-        }
-        else{
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Wrong username or password");
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load App.fxml");
             alert.showAndWait();
         }
     }

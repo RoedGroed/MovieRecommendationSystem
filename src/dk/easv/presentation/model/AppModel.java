@@ -7,6 +7,9 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class AppModel {
 
     LogicManager logic = new LogicManager();
@@ -71,11 +74,30 @@ public class AppModel {
     }
 
     public boolean loginUserFromUsername(String userName) {
-        User u = logic.getUser(userName);
-        obsLoggedInUser.set(u);
-        if (u==null)
-            return false;
-        else
+        User user = logic.getUser(userName);
+        if (user != null){
+            obsLoggedInUser.set(user);
             return true;
+        } else {
+            return false;
+        }
+    }
+
+    public List<Movie> getRecommendedMovies(User currentUser) {
+        // First, get the list of top movies from similar people, which are TopMovie objects
+        List<TopMovie> topMovies = logic.getTopMoviesFromSimilarPeople(currentUser);
+
+        // Then, convert the List<TopMovie> to List<Movie>
+        return topMovies.stream()
+                .map(TopMovie::getMovie) // This assumes TopMovie has a method getMovie()
+                .collect(Collectors.toList());
+    }
+
+    public List<Movie> getTopMoviesUserHasNotSeen(User currentUser) {
+        return logic.getTopAverageRatedMoviesUserDidNotSee(currentUser);
+    }
+
+    public List<Movie> getTopMoviesUserHasSeen(User currentUser){
+        return logic.getTopAverageRatedMovies(currentUser);
     }
 }

@@ -13,7 +13,7 @@ public class TopMovie {
     }
 
     public Movie getMovie() {
-        return movie;
+        return this.movie;
     }
 
     public void setMovie(Movie movie) {

@@ -4,13 +4,11 @@ import dk.easv.entities.Movie;
 import dk.easv.entities.Rating;
 import dk.easv.entities.User;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class DataAccessManager {
     private HashMap<Integer, User> users = new HashMap<>();
@@ -42,12 +40,18 @@ public class DataAccessManager {
 
     private void loadAllMovies() {
         try {
+            File dir = new File("data/movieImages");
+            File[] directoryListing = dir.listFiles();
+            if (directoryListing != null) {
+                Random rand = new Random();
             List<String> movieLines = Files.readAllLines(Path.of("data/movie_titles.txt"));
             for (String movieLine : movieLines) {
                 String[] split = movieLine.split(",");
                 Movie movie = new Movie(Integer.parseInt(split[0]), split[2], Integer.parseInt(split[1]));
+                int index = rand.nextInt(directoryListing.length);
+                movie.setImagePath(directoryListing[index].getPath());
                 movies.put(movie.getId(), movie);
-            }
+            }}
         } catch (IOException e) {
             e.printStackTrace();
         }
