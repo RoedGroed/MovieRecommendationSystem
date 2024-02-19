@@ -4,9 +4,11 @@
     -fx-background-position: center;
 }
 
-#aBox{
-    -fx-background-color: #363636;
-    -fx-opacity: 91;
+#userBox{
+    -fx-background-color: rgba(4, 3, 63, 0.8);
+    -fx-opacity: 25;
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
 }
 
 #title{
@@ -16,12 +18,21 @@
     -fx-text-fill: E73535;
     -fx-opacity: 91;
     -fx-font-style: normal;
-    -fx-effect: dropshadow(one-pass-box, rgba(0, 51, 51, 0.91), 10, 10, 4, 4);
+    -fx-effect: dropshadow(one-pass-box, rgba(11, 10, 70, 0.8), 5, 6, 2, 2);
 }
 
 #Userlbl{
-    -fx-font-size: 24;
-    -fx-font-weight: 900;
+    -fx-font-size: 16;
+    -fx-font-weight: 700;
+    -fx-alignment: center;
+    -fx-text-fill: E73535;
+    -fx-font-style: normal;
+}
+#btnLogout{
+    -fx-background-color: transparent;
+    -fx-font-size: 16;
+    -fx-alignment: center;
+    -fx-font-weight: 700;
     -fx-text-fill: E73535;
     -fx-font-style: normal;
 }
