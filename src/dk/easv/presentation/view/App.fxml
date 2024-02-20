@@ -2,54 +2,75 @@
 
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
 <?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 
+
 <AnchorPane id="ApBg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="/dk/easv/presentation/view/App.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
    <children>
-      <MFXButton id="btnRightFav" layoutX="1636.0" layoutY="939.0" onAction="#scrollRightFav" text="&gt;" />
-      <Label id="title" layoutX="767.0" layoutY="86.0" text="Flixhub" />
-      <HBox layoutX="285.0" layoutY="409.0" prefHeight="150.0" prefWidth="1350.0">
+      <Label id="title" layoutX="1.0" layoutY="86.0" prefHeight="17.0" prefWidth="1920.0" text="Flixhub" />
+      <HBox layoutX="136.0" layoutY="446.0" prefHeight="150.0" prefWidth="1650.0">
          <children>
             <MFXScrollPane fx:id="spRec" hbarPolicy="NEVER" vbarPolicy="NEVER">
                <content>
-                  <HBox fx:id="recommendedHbox" prefHeight="150.0" prefWidth="1350.0" />
+                  <HBox id="imgHbox" fx:id="recommendedHbox" prefHeight="150.0" prefWidth="1650.0">
+                     <padding>
+                        <Insets left="50.0" right="50.0" />
+                     </padding>
+                  </HBox>
                </content>
             </MFXScrollPane>
          </children>
       </HBox>
-      <Label layoutX="285.0" layoutY="372.0" prefHeight="37.0" prefWidth="218.0" text="Recommended for you" />
-      <MFXButton id="btnLeftRec" layoutX="262.0" layoutY="471.0" onAction="#scrollLeftRec" text="&lt;" />
-      <MFXButton id="btnRightRec" layoutX="1636.0" layoutY="471.0" onAction="#scrollRightRec" text="&gt;" />
-      <HBox layoutX="285.0" layoutY="640.0" prefHeight="150.0" prefWidth="1350.0">
+      <MFXButton id="btnLeftRec" layoutX="103.0" layoutY="509.0" onAction="#scrollLeftRec" text="&lt;">
+         </MFXButton>
+      <MFXButton id="btnRightRec" layoutX="1798.0" layoutY="509.0" onAction="#scrollRightRec" text="&gt;" />
+      <Label id="Textlbl" layoutX="136.0" layoutY="409.0" prefHeight="37.0" prefWidth="1650.0" text="Recommended for you" />
+      <HBox layoutX="135.0" layoutY="677.0" prefHeight="150.0" prefWidth="1650.0">
          <children>
             <MFXScrollPane fx:id="spTop" hbarPolicy="NEVER" vbarPolicy="NEVER">
                <content>
-                  <HBox fx:id="top10Hbox" prefHeight="150.0" prefWidth="1350.0" />
+                  <HBox id="imgHbox" fx:id="top10Hbox" prefHeight="150.0" prefWidth="1650.0">
+                     <padding>
+                        <Insets left="50.0" right="50.0" />
+                     </padding>
+                  </HBox>
                </content>
             </MFXScrollPane>
          </children>
       </HBox>
-      <Label layoutX="285.0" layoutY="603.0" prefHeight="37.0" prefWidth="218.0" text="Top 10 movies you haven't watched" />
-      <MFXButton id="btnLeftTop" layoutX="262.0" layoutY="703.0" onAction="#scrollLeftTop" text="&lt;" />
-      <MFXButton id="btnRightTop" layoutX="1636.0" layoutY="703.0" onAction="#scrollRightTop" text="&gt;" />
-      <HBox layoutX="285.0" layoutY="870.0" prefHeight="150.0" prefWidth="1350.0">
+      <MFXButton id="btnLeftTop" layoutX="103.0" layoutY="731.0" onAction="#scrollLeftTop" text="&lt;" />
+      <MFXButton id="btnRightTop" layoutX="1798.0" layoutY="743.0" onAction="#scrollRightTop" text="&gt;" />
+      <Label id="Textlbl" layoutX="134.0" layoutY="640.0" prefHeight="37.0" prefWidth="1650.0" text="Top 10 movies you haven't watched" />
+      <HBox layoutX="135.0" layoutY="907.0" prefHeight="150.0" prefWidth="1650.0">
          <children>
             <MFXScrollPane fx:id="spFav" hbarPolicy="NEVER" vbarPolicy="NEVER">
                <content>
-                  <HBox fx:id="favHbox" prefHeight="150.0" prefWidth="1350.0" />
+                  <HBox id="imgHbox" fx:id="favHbox" prefHeight="150.0" prefWidth="1650.0">
+                     <padding>
+                        <Insets left="50.0" right="50.0" />
+                     </padding>
+                  </HBox>
                </content>
             </MFXScrollPane>
          </children>
       </HBox>
-      <Label layoutX="285.0" layoutY="833.0" prefHeight="37.0" prefWidth="218.0" text="Favourites" />
-      <MFXButton id="btnLeftFav" layoutX="262.0" layoutY="933.0" onAction="#scrollLeftFav" text="&lt;" />
-      <Pane id="userBox" layoutX="10.0" layoutY="35.0" prefHeight="30.0" prefWidth="350.0">
+      <MFXButton id="btnLeftFav" layoutX="103.0" layoutY="973.0" onAction="#scrollLeftFav" text="&lt;" />
+      <MFXButton id="btnRightFav" layoutX="1798.0" layoutY="973.0" onAction="#scrollRightFav" text="&gt;" />
+      <Label id="Textlbl" layoutX="136.0" layoutY="870.0" prefHeight="37.0" prefWidth="1650.0" text="Favourites" />
+      <Pane id="userBox" layoutX="10.0" layoutY="35.0" prefHeight="30.0" prefWidth="324.0">
          <children>
-            <Label id="Userlbl" fx:id="lblUser" layoutX="87.0" layoutY="4.0" text="|  Logged in as: &lt;user&gt;" />
-            <MFXButton id="btnLogout" layoutX="-4.0" layoutY="-4.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="41.0" prefWidth="91.0" snapToPixel="false" text="Logout" />
+            <Label id="Userlbl" fx:id="lblUser" layoutX="55.0" layoutY="3.0" text="|  Logged in as: &lt;user&gt;" />
+            <MenuButton id="Menubtn" layoutX="4.0" layoutY="2.0" mnemonicParsing="false">
+              <items>
+                <MenuItem id="MenuItem" mnemonicParsing="false" onAction="#onLogout" text="Logout" />
+              </items>
+            </MenuButton>
          </children>
       </Pane>
    </children>

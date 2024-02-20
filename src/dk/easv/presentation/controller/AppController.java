@@ -48,7 +48,7 @@ public class AppController implements Initializable {
     private int currentIndexRecommended = 0;
     private int currentIndexTop10 = 0;
     private final int LOAD_COUNT = 10;
-    private static final double SCROLL_AMOUNT = 550;
+    private static final double SCROLL_AMOUNT = 660;
 
     private void startTimer(String message) {
         timerStartMillis = System.currentTimeMillis();
@@ -90,7 +90,7 @@ public class AppController implements Initializable {
 
     private void displayMovies(HBox hbox, List<Movie> movies) {
         hbox.getChildren().clear(); // Clear previous content if any
-        hbox.setSpacing(25);
+        hbox.setSpacing(40);
 
         int displayLimit = Math.min(movies.size(), 10);
         for (int i = 0; i < displayLimit; i++) {
@@ -107,7 +107,7 @@ public class AppController implements Initializable {
 
     private ImageView createImageView(Movie movie) {
         ImageView imageView = new ImageView(new Image(new File(movie.getImagePath()).toURI().toString(), true));
-        imageView.setFitWidth(250); // Set the width of the movie image
+        imageView.setFitWidth(300); // Set the width of the movie image
         imageView.setFitHeight(150); // Set the height of the movie image
         imageView.setPreserveRatio(false);
         imageView.setSmooth(true);

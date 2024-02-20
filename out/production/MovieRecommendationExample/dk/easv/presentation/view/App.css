@@ -1,48 +1,78 @@
 #ApBg{
-    -fx-background-image:url(images/AppBg2.jpg);
+    -fx-background-image:url(images/AppBg3.jpg);
     -fx-background-size: stretch;
     -fx-background-position: center;
 }
 
 #userBox{
-    -fx-background-color: rgba(4, 3, 63, 0.8);
-    -fx-opacity: 25;
+    -fx-background-color: rgba(0, 0, 0, 0.67);
     -fx-border-radius: 10 10 10 10;
     -fx-background-radius: 10 10 10 10;
+}
+
+#Textlbl{
+    -fx-font-size: 25;
+    -fx-font-weight: 900;
+    -fx-text-fill: #E73535;
+    -fx-font-style: normal;
 }
 
 #title{
     -fx-font-size: 150;
     -fx-font-weight: 900;
     -fx-alignment: CENTER;
-    -fx-text-fill: E73535;
+    -fx-text-fill: #E73535;
     -fx-opacity: 91;
     -fx-font-style: normal;
-    -fx-effect: dropshadow(one-pass-box, rgba(11, 10, 70, 0.8), 5, 6, 2, 2);
+    -fx-effect: dropshadow(one-pass-box, rgba(11, 10, 70, 0.8), 3, 6, 2, 2);
 }
 
 #Userlbl{
-    -fx-font-size: 16;
+    -fx-font-size: 18;
     -fx-font-weight: 700;
     -fx-alignment: center;
-    -fx-text-fill: E73535;
+    -fx-text-fill: #E73535;
     -fx-font-style: normal;
 }
 #btnLogout{
     -fx-background-color: transparent;
-    -fx-font-size: 16;
+    -fx-font-size: 18;
     -fx-alignment: center;
     -fx-font-weight: 700;
-    -fx-text-fill: E73535;
+    -fx-text-fill: #E73535;
     -fx-font-style: normal;
+}
+
+#Menubtn {
+    -fx-background-image: url(images/Menubtn.png);
+    -fx-background-size: stretch;
+    -fx-background-color: transparent;
+}
+
+.context-menu {
+    -fx-background-color: transparent;
+}
+
+.menu-button > .arrow-button {
+    visibility: hidden;
+}
+
+#MenuItem{
+    -fx-background-color: rgb(2, 28, 67);
+}
+
+#MenuItem .label {
+    -fx-text-fill: #E73535;
+    -fx-font-size: 18;
 }
 
 .mfx-button{
     -fx-background-color: transparent;
     -fx-font-size: 24;
     -fx-font-weight: 900;
-    -fx-text-fill: E73535;
+    -fx-text-fill: #E73535;
     -fx-font-style: normal;
+    -fx-alignment: center;
 }
 
 .scroll-pane{
@@ -55,4 +85,8 @@
     -fx-effect: dropshadow(one-pass-box, black, 5, 0, 2, 2);
     -fx-background-color: transparent;
     -fx-font-size: 18px;
+}
+
+#imgHbox{
+    -fx-alignment: center;
 }
