@@ -48,7 +48,7 @@ public class AppController implements Initializable {
     private int currentIndexRecommended = 0;
     private int currentIndexTop10 = 0;
     private final int LOAD_COUNT = 10;
-    private static final double SCROLL_AMOUNT = 660;
+    private static final double SCROLL_AMOUNT = 680;
 
     private void startTimer(String message) {
         timerStartMillis = System.currentTimeMillis();

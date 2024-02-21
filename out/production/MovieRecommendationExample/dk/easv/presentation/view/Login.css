@@ -33,9 +33,9 @@ Label{
     -fx-min-height: 40;
     -fx-min-width: 300;
     -fx-text-fill: white;
-    -fx-font-style: Italic;
+    -fx-font-size: 18;
+    -fx-font-style: Italic, bold;
     -fx-background-radius: 10;
-
 }
 
 /* Flixhub */
@@ -45,7 +45,7 @@ Label{
     -fx-font-size: 90px;
     -fx-alignment: center;
     -fx-opacity: 81;
-    -fx-font-style: normal;
-    -fx-effect: dropshadow(one-pass-box, rgba(11, 10, 70, 0.8), 5, 6, 2, 2);
+    -fx-font-style: Italic, normal;
+    -fx-effect: dropshadow(one-pass-box, rgba(11, 10, 70, 0.8), 3, 6, 2, 2);
 
 }

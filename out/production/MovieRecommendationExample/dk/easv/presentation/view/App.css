@@ -1,7 +1,11 @@
-#ApBg{
-    -fx-background-image:url(images/AppBg3.jpg);
+#BpBg{
+    -fx-background-image:url(Images/AppBg.jpg);
     -fx-background-size: stretch;
     -fx-background-position: center;
+}
+
+#ApBg{
+    -fx-background-color: transparent;
 }
 
 #userBox{
@@ -11,10 +15,12 @@
 }
 
 #Textlbl{
-    -fx-font-size: 25;
+    -fx-font-size: 22;
     -fx-font-weight: 900;
     -fx-text-fill: #E73535;
-    -fx-font-style: normal;
+    -fx-font-style: Italic, normal;
+    -fx-effect: dropshadow(one-pass-box, rgba(11, 10, 70, 0.8), 3, 6, 2, 2);
+
 }
 
 #title{
@@ -23,7 +29,7 @@
     -fx-alignment: CENTER;
     -fx-text-fill: #E73535;
     -fx-opacity: 91;
-    -fx-font-style: normal;
+    -fx-font-style: Italic, normal;
     -fx-effect: dropshadow(one-pass-box, rgba(11, 10, 70, 0.8), 3, 6, 2, 2);
 }
 
@@ -32,7 +38,7 @@
     -fx-font-weight: 700;
     -fx-alignment: center;
     -fx-text-fill: #E73535;
-    -fx-font-style: normal;
+    -fx-font-style: Italic, normal;
 }
 #btnLogout{
     -fx-background-color: transparent;
@@ -40,7 +46,7 @@
     -fx-alignment: center;
     -fx-font-weight: 700;
     -fx-text-fill: #E73535;
-    -fx-font-style: normal;
+    -fx-font-style: Italic, normal;
 }
 
 #Menubtn {
@@ -64,14 +70,13 @@
 #MenuItem .label {
     -fx-text-fill: #E73535;
     -fx-font-size: 18;
+    -fx-font-style: Italic;
 }
 
 .mfx-button{
+    -fx-background-image: url(images/Arrowbtn.png);
+    -fx-background-size: stretch;
     -fx-background-color: transparent;
-    -fx-font-size: 24;
-    -fx-font-weight: 900;
-    -fx-text-fill: #E73535;
-    -fx-font-style: normal;
     -fx-alignment: center;
 }
 
@@ -84,7 +89,8 @@
     -fx-font-weight: bold;
     -fx-effect: dropshadow(one-pass-box, black, 5, 0, 2, 2);
     -fx-background-color: transparent;
-    -fx-font-size: 18px;
+    -fx-font-size: 18;
+    -fx-font-style: Italic;
 }
 
 #imgHbox{
