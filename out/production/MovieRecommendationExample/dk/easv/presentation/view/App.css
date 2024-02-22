@@ -8,7 +8,7 @@
     -fx-background-color: transparent;
 }
 
-#userBox{
+#UserBox{
     -fx-background-color: rgba(0, 0, 0, 0.67);
     -fx-border-radius: 10 10 10 10;
     -fx-background-radius: 10 10 10 10;
@@ -24,7 +24,7 @@
 }
 
 #title{
-    -fx-font-size: 150;
+    -fx-font-size: 100;
     -fx-font-weight: 900;
     -fx-alignment: CENTER;
     -fx-text-fill: #E73535;

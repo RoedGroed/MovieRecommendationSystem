@@ -132,37 +132,37 @@ public class AppController implements Initializable {
     @FXML
     private void scrollLeftRec(ActionEvent actionEvent) {
         double hValue = spRec.getHvalue() - SCROLL_AMOUNT / spRec.getContent().getBoundsInLocal().getWidth();
-        spRec.setHvalue(Math.max(hValue, 0)); // Ensure we don't scroll past the beginning
+        spRec.setHvalue(Math.max(hValue, 0));
     }
 
     @FXML
     private void scrollRightRec(ActionEvent actionEvent) {
         double hValue = spRec.getHvalue() + SCROLL_AMOUNT / spRec.getContent().getBoundsInLocal().getWidth();
-        spRec.setHvalue(Math.min(hValue, 1)); // Ensure we don't scroll past the end
+        spRec.setHvalue(Math.min(hValue, 1));
     }
 
     @FXML
     private void scrollLeftTop(ActionEvent actionEvent) {
         double hValue = spTop.getHvalue() - SCROLL_AMOUNT / spTop.getContent().getBoundsInLocal().getWidth();
-        spTop.setHvalue(Math.max(hValue, 0)); // Ensure we don't scroll past the beginning
+        spTop.setHvalue(Math.max(hValue, 0));
     }
 
     @FXML
     private void scrollRightTop(ActionEvent actionEvent) {
         double hValue = spTop.getHvalue() + SCROLL_AMOUNT / spTop.getContent().getBoundsInLocal().getWidth();
-        spTop.setHvalue(Math.min(hValue, 1)); // Ensure we don't scroll past the end
+        spTop.setHvalue(Math.min(hValue, 1));
     }
 
     @FXML
     private void scrollLeftFav(ActionEvent actionEvent) {
         double hValue = spFav.getHvalue() - SCROLL_AMOUNT / spFav.getContent().getBoundsInLocal().getWidth();
-        spFav.setHvalue(Math.max(hValue, 0)); // Ensure we don't scroll past the end
+        spFav.setHvalue(Math.max(hValue, 0));
     }
 
     @FXML
     private void scrollRightFav(ActionEvent actionEvent) {
         double hValue = spFav.getHvalue() + SCROLL_AMOUNT / spFav.getContent().getBoundsInLocal().getWidth();
-        spFav.setHvalue(Math.min(hValue, 1)); // Ensure we don't scroll past the end
+        spFav.setHvalue(Math.min(hValue, 1));
     }
 
     @FXML
