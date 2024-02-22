@@ -40,15 +40,10 @@ public class AppController implements Initializable {
     private HBox recommendedHbox;
     @FXML
     private HBox top10Hbox;
-    @FXML
-    private Label title;
     private AppModel model;
     private long timerStartMillis = 0;
     private String timerMsg = "";
-    private int currentIndexRecommended = 0;
-    private int currentIndexTop10 = 0;
-    private final int LOAD_COUNT = 10;
-    private static final double SCROLL_AMOUNT = 680;
+    private static final double SCROLL_AMOUNT = 520;
 
     private void startTimer(String message) {
         timerStartMillis = System.currentTimeMillis();
@@ -89,10 +84,10 @@ public class AppController implements Initializable {
     }
 
     private void displayMovies(HBox hbox, List<Movie> movies) {
-        hbox.getChildren().clear(); // Clear previous content if any
+        hbox.getChildren().clear();
         hbox.setSpacing(15);
 
-        int displayLimit = Math.min(movies.size(), 10);
+        int displayLimit = 10;
         for (int i = 0; i < displayLimit; i++) {
             Movie movie = movies.get(i);
             ImageView imageView = createImageView(movie);
@@ -100,6 +95,7 @@ public class AppController implements Initializable {
 
             StackPane stackPane = new StackPane(imageView, labelOverlay);
             stackPane.setAlignment(Pos.BOTTOM_CENTER);
+            stackPane.getStyleClass().add("stackpMovies");
 
             hbox.getChildren().add(stackPane);
         }
@@ -107,11 +103,10 @@ public class AppController implements Initializable {
 
     private ImageView createImageView(Movie movie) {
         ImageView imageView = new ImageView(new Image(new File(movie.getImagePath()).toURI().toString(), true));
-        imageView.setFitWidth(200); // Set the width of the movie image
-        imageView.setFitHeight(100); // Set the height of the movie image
+        imageView.setFitWidth(300); // Set the width of the movie image
+        imageView.setFitHeight(120); // Set the height of the movie image
         imageView.setPreserveRatio(false);
         imageView.setSmooth(true);
-        imageView.setCache(true);
         return imageView;
     }
 
@@ -122,9 +117,6 @@ public class AppController implements Initializable {
         VBox labelBox = new VBox(titleLabel);
         labelBox.setAlignment(Pos.BOTTOM_CENTER);
         labelBox.setPadding(new Insets(5));
-
-        // Make sure the labelBox doesn't block the entire image view
-        labelBox.setMaxSize(Control.USE_PREF_SIZE, Control.USE_PREF_SIZE);
 
         return labelBox;
     }
@@ -167,11 +159,9 @@ public class AppController implements Initializable {
 
     @FXML
     private void onLogout() throws IOException {
-        // Close the current window
         Stage stage = (Stage) favHbox.getScene().getWindow();
         stage.close();
 
-        // Load the login screen
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/Login.fxml"));
         Parent root = loader.load();
         Stage loginStage = new Stage();

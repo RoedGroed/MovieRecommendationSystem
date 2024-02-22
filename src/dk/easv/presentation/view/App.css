@@ -14,25 +14,6 @@
     -fx-background-radius: 10 10 10 10;
 }
 
-#Textlbl{
-    -fx-font-size: 22;
-    -fx-font-weight: 900;
-    -fx-text-fill: #E73535;
-    -fx-font-style: Italic, normal;
-    -fx-effect: dropshadow(one-pass-box, rgba(11, 10, 70, 0.8), 3, 6, 2, 2);
-
-}
-
-#title{
-    -fx-font-size: 100;
-    -fx-font-weight: 900;
-    -fx-alignment: CENTER;
-    -fx-text-fill: #E73535;
-    -fx-opacity: 91;
-    -fx-font-style: Italic, normal;
-    -fx-effect: dropshadow(one-pass-box, rgba(11, 10, 70, 0.8), 3, 6, 2, 2);
-}
-
 #Userlbl{
     -fx-font-size: 18;
     -fx-font-weight: 700;
@@ -53,6 +34,12 @@
     -fx-background-image: url(images/Menubtn.png);
     -fx-background-size: stretch;
     -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+#Menubtn:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
 }
 
 .context-menu {
@@ -65,6 +52,7 @@
 
 #MenuItem{
     -fx-background-color: rgb(2, 28, 67);
+    -fx-cursor: hand;
 }
 
 #MenuItem .label {
@@ -73,11 +61,39 @@
     -fx-font-style: Italic;
 }
 
+#MenuItem:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+#title{
+    -fx-font-size: 100;
+    -fx-font-weight: 900;
+    -fx-alignment: CENTER;
+    -fx-text-fill: #E73535;
+    -fx-opacity: 91;
+    -fx-font-style: Italic, normal;
+    -fx-effect: dropshadow(one-pass-box, rgba(11, 10, 70, 0.8), 3, 6, 2, 2);
+}
+
+#Textlbl{
+    -fx-font-size: 22;
+    -fx-font-weight: 900;
+    -fx-text-fill: #E73535;
+    -fx-font-style: Italic, normal;
+    -fx-effect: dropshadow(one-pass-box, rgba(11, 10, 70, 0.8), 3, 6, 2, 2);
+}
+
 .mfx-button{
     -fx-background-image: url(images/Arrowbtn.png);
     -fx-background-size: stretch;
     -fx-background-color: transparent;
     -fx-alignment: center;
+    -fx-cursor: hand;
+}
+.mfx-button:hover{
+    -fx-scale-x: 2.2;
+    -fx-scale-y: 2.2;
 }
 
 .scroll-pane{
@@ -95,4 +111,13 @@
 
 #imgHbox{
     -fx-alignment: center;
+}
+
+.stackpMovies{
+    -fx-cursor: hand;
+}
+
+.stackpMovies:hover{
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
 }
