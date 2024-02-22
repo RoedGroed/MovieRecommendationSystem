@@ -90,7 +90,7 @@ public class AppController implements Initializable {
 
     private void displayMovies(HBox hbox, List<Movie> movies) {
         hbox.getChildren().clear(); // Clear previous content if any
-        hbox.setSpacing(40);
+        hbox.setSpacing(15);
 
         int displayLimit = Math.min(movies.size(), 10);
         for (int i = 0; i < displayLimit; i++) {
@@ -107,8 +107,8 @@ public class AppController implements Initializable {
 
     private ImageView createImageView(Movie movie) {
         ImageView imageView = new ImageView(new Image(new File(movie.getImagePath()).toURI().toString(), true));
-        imageView.setFitWidth(300); // Set the width of the movie image
-        imageView.setFitHeight(150); // Set the height of the movie image
+        imageView.setFitWidth(200); // Set the width of the movie image
+        imageView.setFitHeight(100); // Set the height of the movie image
         imageView.setPreserveRatio(false);
         imageView.setSmooth(true);
         imageView.setCache(true);

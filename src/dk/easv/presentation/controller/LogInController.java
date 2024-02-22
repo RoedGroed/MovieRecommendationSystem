@@ -54,6 +54,7 @@ public class LogInController implements Initializable {
             appController.initializeWithUser(currentUser); // Initialize with the current user
 
             Stage stage = new Stage();
+            //stage.setFullScreen(true);
             stage.setScene(new Scene(root));
             stage.setTitle("Movie Recommendation System 0.01 Beta");
             stage.show();

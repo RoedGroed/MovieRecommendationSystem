@@ -1,0 +1,21 @@
+
+o	java:S1162"URename this field "LOAD_COUNT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äèæ–úÿÿÿÿ
+<
+java:S11702"!Make this final field static too.(äèæ–úÿÿÿÿ
+œ
+java:S1186?"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•‘ÝŸüÿÿÿÿ
+@	java:S106;"+Replace this use of System.out by a logger.(¾³ûè
+c
+java:S3252"HUse static access with "javafx.scene.layout.Region" for "USE_PREF_SIZE".(Žþêóýÿÿÿÿ
+c
+java:S3252"HUse static access with "javafx.scene.layout.Region" for "USE_PREF_SIZE".(Žþêóýÿÿÿÿ
+U
+java:S1128":Remove this unused import 'javafx.scene.control.ListView'.(ôõÂÄøÿÿÿÿ
+K
+java:S1128"5Remove this unused import 'javafx.scene.paint.Color'.(Ïî£à
+V
+java:S10680";Remove this unused "currentIndexRecommended" private field.(†“¯«üÿÿÿÿ
+J
+java:S10681"5Remove this unused "currentIndexTop10" private field.(Àäî]
+I
+java:S10682".Remove this unused "LOAD_COUNT" private field.(äèæ–úÿÿÿÿ
